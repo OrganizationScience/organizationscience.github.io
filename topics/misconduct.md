@@ -8,15 +8,9 @@ class: misconduct-page
 
 Explore research on misconduct, categorized into Antecedents, Consequences, and Reactions, which collectively analyze organizational behavior.
 
-## Search
-<div class="featured-content">
-  Search for authors, categories, or keywords:
-
-  <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search for authors, categories, or keywords..." style="width: 100%; padding: 10px; margin-bottom: 20px;">
-
 <div class="container">
   <div style="overflow-x: auto;">
-    <table id="researchTable">
+    <table id="misconductTable" class="display">
       <thead>
         <tr>
           <th style="width: 15%;">Category</th>
@@ -75,32 +69,8 @@ Explore research on misconduct, categorized into Antecedents, Consequences, and 
 </div>
 
 <script>
-  // Dynamically assign IDs to table rows
-  document.addEventListener("DOMContentLoaded", function () {
-    const rows = document.querySelectorAll("#researchTable tbody tr");
-    rows.forEach((row, index) => {
-      row.id = `row-${index + 1}`; // Assign unique ID to each row
-    });
+  // Initialize DataTables for the misconduct table
+  document.addEventListener('DOMContentLoaded', function () {
+      $('#misconductTable').DataTable();
   });
-
-  // Search Table Functionality
-  function searchTable() {
-    const input = document.getElementById("searchInput");
-    const filter = input.value.toLowerCase();
-    const table = document.getElementById("researchTable");
-    const rows = table.querySelectorAll("tbody tr");
-
-    rows.forEach((row) => {
-      const cells = row.querySelectorAll("td");
-      const rowText = Array.from(cells)
-        .map((cell) => cell.textContent.toLowerCase())
-        .join(" "); // Concatenate all cell values in the row
-
-      if (rowText.includes(filter)) {
-        row.style.display = ""; // Show the row if it matches the filter
-      } else {
-        row.style.display = "none"; // Hide the row if it doesn't match the filter
-      }
-    });
-  }
 </script>
