@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Organization Science
+class: misconduct-page
 ---
 
 # Misconduct
