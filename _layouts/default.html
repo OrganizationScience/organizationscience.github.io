@@ -1,223 +1,147 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: 'en-US' }}">
-  <head>
-    <meta charset="UTF-8">
-    {% seo %}
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#157878">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+<head>
+  <meta charset="UTF-8">
+  {% seo %}
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#157878">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+  <style>
+    body {
+      display: flex;
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+    }
 
-    <style>
-      body {
-        display: flex;
-        margin: 0;
-        font-family: 'Open Sans', sans-serif;
-      }
+    .nav-bar {
+      width: 250px;
+      background-color: #157878;
+      color: white;
+      height: 100vh;
+      padding: 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
 
-      .nav-bar {
-        width: 250px;
-        background-color: #157878;
-        color: white;
-        height: 100vh;
-        padding: 20px;
-        position: fixed;
-        top: 0;
-        left: 0;
-      }
+    .nav-bar ul {
+      list-style-type: none;
+      padding: 0;
+    }
 
-      .nav-bar h2 {
-        font-size: 18px;
-        margin-bottom: 15px;
-        color: white;
-      }
+    .nav-bar ul li {
+      margin: 10px 0;
+    }
 
-      .nav-bar ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-      }
+    .nav-bar ul li a {
+      color: white;
+      text-decoration: none;
+    }
 
-      .nav-bar ul li {
-        margin: 10px 0;
-      }
+    .content-container {
+      margin-left: 270px;
+      padding: 20px;
+      width: calc(100% - 270px);
+    }
 
-      .nav-bar ul li a {
-        color: white;
-        text-decoration: none;
-        font-size: 16px;
-      }
+    header.page-header {
+      text-align: center;
+      padding: 20px;
+      background-color: #3A7D44;
+      color: white;
+    }
 
-      .nav-bar ul li a:hover {
-        text-decoration: underline;
-      }
+    .featured-topics {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
 
-      .content-container {
-        margin-left: 270px;
-        padding: 20px;
-        width: calc(100% - 270px);
-      }
+    .topic {
+      background-color: #f9f9f9;
+      padding: 15px;
+      border-radius: 10px;
+      width: 100%;
+      margin-right: 15px;
+    }
 
-      header.page-header {
-        background: linear-gradient(90deg, #157878, #3a7d44);
-        color: white;
-        padding: 20px;
-        text-align: center;
-      }
+    .topic img {
+      max-width: 120px;
+      height: auto;
+      float: left;
+      margin-right: 20px;
+    }
 
-      header.page-header h1 a {
-        color: white;
-        text-decoration: none;
-      }
+    .more-link {
+      display: block;
+      color: #157878;
+      margin-top: 10px;
+    }
+  </style>
+  {% include head-custom.html %}
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <div class="nav-bar">
+    <h2>Navigation</h2>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/topics/misconduct.html">Misconduct</a></li>
+      <li><a href="/topics/science.html">Science Innovation</a></li>
+      <li><a href="/topics/other-topic.html">Other Topics</a></li>
+    </ul>
+  </div>
 
-      header.page-header h1 {
-        font-size: 2.5em;
-        margin: 0;
-      }
+  <!-- Main Content -->
+  <div class="content-container">
+    <header class="page-header" role="banner">
+      <h1 class="project-name"><a href="/" style="color: white; text-decoration: none;">Organization Science</a></h1>
+      <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
+    </header>
 
-      header.page-header h2 {
-        font-size: 1.2em;
-        font-weight: normal;
-        margin: 10px 0 0;
-      }
+    <main id="content" class="main-content" role="main">
+      {{ content }}
+    </main>
 
-      .featured-topics {
-        margin-top: 20px;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-      }
+    <footer class="site-footer" style="margin-top: 20px; text-align: center;">
+      {% if site.github.is_project_page %}
+        <span class="site-footer-owner"><a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a> is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.</span>
+      {% endif %}
+      <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+    </footer>
+  </div>
 
-      .topic {
-        background-color: #f9f9f9;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      }
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const misconductUrl = "/topics/misconduct.html";
 
-      .topic img {
-        max-width: 100px;
-        height: auto;
-        float: left;
-        margin-right: 15px;
-      }
+      fetch(misconductUrl)
+        .then((response) => response.text())
+        .then((html) => {
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(html, "text/html");
+          const table = doc.querySelector("#researchTable tbody");
+          const rows = table.querySelectorAll("tr");
+          const misconductList = document.getElementById("misconduct-top5");
 
-      .topic h3 {
-        font-size: 1.5em;
-        margin-bottom: 10px;
-      }
+          for (let i = 0; i < Math.min(5, rows.length); i++) {
+            const cells = rows[i].querySelectorAll("td");
+            const category = cells[0].textContent.trim();
+            const subcategory = cells[1].textContent.trim();
+            const author = cells[2].textContent.trim();
 
-      .topic ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-
-      .topic ul li {
-        margin-bottom: 10px;
-      }
-
-      .more-link {
-        color: #157878;
-        text-decoration: none;
-        font-weight: bold;
-        display: block;
-        margin-top: 10px;
-      }
-
-      footer.site-footer {
-        text-align: center;
-        padding: 10px;
-        background-color: #157878;
-        color: white;
-        margin-top: 40px;
-      }
-
-      footer.site-footer a {
-        color: white;
-        text-decoration: underline;
-      }
-    </style>
-    {% include head-custom.html %}
-  </head>
-  <body>
-    <!-- Navigation Bar -->
-    <div class="nav-bar">
-      <h2>Navigation</h2>
-      <ul>
-        <li><a href="https://organizationscience.github.io/">Home</a></li>
-        <li><a href="/topics/misconduct.html">Misconduct</a></li>
-        <li><a href="/topics/science.html">Science Innovation</a></li>
-        <li><a href="/topics/other-topic.html">Other Topics</a></li>
-      </ul>
-    </div>
-
-    <!-- Main Content -->
-    <div class="content-container">
-      <header class="page-header" role="banner">
-        <h1 class="project-name">
-          <a href="https://organizationscience.github.io/">Organization Science</a>
-        </h1>
-        <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
-      </header>
-
-      <main id="content" class="main-content" role="main">
-        <h2>Research Topics</h2>
-        <p>
-          All Organization Science research is categorized into topic areas that collectively span the field of organizational behavior.
-        </p>
-
-        <section class="featured-topics">
-          <div class="topic">
-            <img src="assets/images/misconduct.jpg" alt="Misconduct">
-            <div class="topic-content">
-              <h3>Misconduct</h3>
-              <ul id="misconduct-top5">
-                <!-- Top 5 rows will be dynamically injected here -->
-              </ul>
-              <a href="/topics/misconduct.html" class="more-link">More research on this topic →</a>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <footer class="site-footer">
-        <span class="site-footer-credits">
-          This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.
-        </span>
-      </footer>
-    </div>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const misconductUrl = "/topics/misconduct.html";
-
-        fetch(misconductUrl)
-          .then((response) => response.text())
-          .then((html) => {
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(html, "text/html");
-            const table = doc.querySelector("#researchTable tbody");
-            const rows = table.querySelectorAll("tr");
-            const misconductList = document.getElementById("misconduct-top5");
-
-            for (let i = 0; i < Math.min(5, rows.length); i++) {
-              const cells = rows[i].querySelectorAll("td");
-              const category = cells[0].textContent.trim();
-              const subcategory = cells[1].textContent.trim();
-              const author = cells[2].textContent.trim();
-
-              const listItem = document.createElement("li");
-              listItem.innerHTML = `
-                <strong>${author}</strong> - <em>${category}</em>, ${subcategory} 
-                (<a href="${misconductUrl}#row-${i}">View Details</a>)
-              `;
-              misconductList.appendChild(listItem);
-            }
-          })
-          .catch((error) => console.error("Error fetching misconduct data:", error));
-      });
-    </script>
-  </body>
+            const listItem = document.createElement("li");
+            listItem.innerHTML = `
+              <strong>${author}</strong> - <em>${category}</em>, ${subcategory} 
+              (<a href="${misconductUrl}#row-${i}">View Details</a>)
+            `;
+            misconductList.appendChild(listItem);
+          }
+        })
+        .catch((error) => console.error("Error fetching misconduct data:", error));
+    });
+  </script>
+</body>
 </html>
