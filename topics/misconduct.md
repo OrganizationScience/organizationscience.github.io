@@ -1,10 +1,14 @@
 ---
 layout: default
-title: Antecedents
+title: Misconduct
 ---
 
-<h1>Antecedents</h1>
-<p>Drivers and Preventive Factors related to antecedents in organizational behavior research.</p>
+# Misconduct
+
+Explore research on misconduct, categorized into Antecedents, Consequences, and Reactions, which collectively analyze organizational behavior.
+
+## Search
+Search for authors, categories, or keywords:
 
 <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search for authors, categories, or keywords..." style="width: 100%; padding: 10px; margin-bottom: 20px;">
 
@@ -19,6 +23,7 @@ title: Antecedents
     </tr>
   </thead>
   <tbody>
+    <!-- Antecedents Rows -->
     <tr>
       <td>Antecedents</td>
       <td>Drivers and Preventive Factors</td>
@@ -33,19 +38,34 @@ title: Antecedents
       <td>Chambers, C. R. (2024). Nonmonetary reward systems, counterproductive behavior, and responses to sanctions in open collaboration environments. Organization Science, 35(3), 928-947.</td>
       <td>This research investigates how nonmonetary rewards and sanctions impact counterproductive behaviors in collaborative work environments. Findings indicate that nonmonetary rewards can reduce negative behaviors, but sanctions have varying effects depending on the severity of the infraction.</td>
     </tr>
-    <!-- Add more rows here using the same format -->
+    <!-- Consequences Rows -->
+    <tr>
+      <td>Consequences</td>
+      <td>Impact of Misconduct</td>
+      <td>Dimitriadis (2024)</td>
+      <td>Dimitriadis, S. (2024). Bribery, insecurity, and firm performance: Evidence from the Boko Haram insurgency in Nigeria. Strategic Management Journal.</td>
+      <td>This research investigates the impact of bribery and insecurity on firm performance during the Boko Haram insurgency in Nigeria. Results show that firms engaged in bribery are less resilient to external threats, underscoring the detriment of corruption during crises.</td>
+    </tr>
+    <!-- Reactions Rows -->
+    <tr>
+      <td>Reactions</td>
+      <td>Responses to Misconduct</td>
+      <td>Berry & Hildreth (2024)</td>
+      <td>Berry, Z., & Hildreth, J. A. D. (2024). When Your Friend is My Friend: How Loyalty Prompts Support for Indirect Ties in Moral Dilemmas. Organization Science.</td>
+      <td>The authors explore how loyalty impacts support for indirect ties in moral dilemmas, revealing that people are more likely to support third parties connected through shared acquaintances in situations requiring loyalty.</td>
+    </tr>
   </tbody>
 </table>
 
 <script>
   function searchTable() {
-    const input = document.getElementById('searchInput');
+    const input = document.getElementById("searchInput");
     const filter = input.value.toLowerCase();
-    const table = document.getElementById('researchTable');
-    const rows = table.getElementsByTagName('tr');
+    const table = document.getElementById("researchTable");
+    const rows = table.getElementsByTagName("tr");
 
     for (let i = 1; i < rows.length; i++) {
-      const cells = rows[i].getElementsByTagName('td');
+      const cells = rows[i].getElementsByTagName("td");
       let match = false;
 
       for (let j = 0; j < cells.length; j++) {
@@ -57,8 +77,7 @@ title: Antecedents
           }
         }
       }
-
-      rows[i].style.display = match ? '' : 'none';
+      rows[i].style.display = match ? "" : "none";
     }
   }
 </script>
