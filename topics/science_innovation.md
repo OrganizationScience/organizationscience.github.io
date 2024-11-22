@@ -10,7 +10,7 @@ Explore research on science innovation, categorized into Antecedents, Consequenc
 
 <div class="container">
   <div style="overflow-x: auto;">
-    <table id="researchTable" class="display">
+    <table id="science_innovationTable" class="display">
       <thead>
         <tr>
           <th style="width: 15%;">Category</th>
@@ -51,10 +51,10 @@ Explore research on science innovation, categorized into Antecedents, Consequenc
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     // Initialize DataTables
-    $('#researchTable').DataTable();
+    $('#science_innovationTable').DataTable();
 
     // Assign unique IDs to each row
-    const rows = document.querySelectorAll('#researchTable tbody tr');
+    const rows = document.querySelectorAll('#science_innovationTable tbody tr');
     rows.forEach((row, index) => {
       row.id = `row-${index + 1}`; // Assign a unique ID
     });
