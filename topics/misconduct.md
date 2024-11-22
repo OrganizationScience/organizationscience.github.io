@@ -28,7 +28,20 @@ Explore research on misconduct, categorized into Antecedents, Consequences, and 
           <td>Brady, G. L., & Sivanathan, N. (2024). More than meets the eye: the unintended consequence of leader dominance orientation on subordinate ethicality. Organization Science, 35(4), 1322-1341.</td>
           <td>This research investigates how leader dominance orientation inadvertently encourages unethical behavior among subordinates. Dominant leaders create an environment where subordinates feel compelled to engage in self-interested actions, undermining overall ethicality.</td>
         </tr>
-        <!-- Add more rows as needed -->
+        <tr>
+          <td>Antecedents</td>
+          <td>Drivers and Preventive Factors</td>
+          <td>Chambers (2024)</td>
+          <td>Chambers, C. R. (2024). Nonmonetary reward systems, counterproductive behavior, and responses to sanctions in open collaboration environments. Organization Science, 35(3), 928-947.</td>
+          <td>This research investigates how nonmonetary rewards and sanctions impact counterproductive behaviors in collaborative work environments. Findings indicate that nonmonetary rewards can reduce negative behaviors, but sanctions have varying effects depending on the severity of the infraction.</td>
+        </tr>
+        <tr>
+          <td>Antecedents</td>
+          <td>Drivers and Preventive Factors</td>
+          <td>Dakhlallah (2024)</td>
+          <td>Dakhlallah, D. (2024). Bribery in the Workplace: A Field Experiment on the Threat of Making Group Behavior Visible. Organization Science.</td>
+          <td>This field experiment explores how visibility of group behavior affects bribery in workplaces, finding that making unethical behavior observable decreases instances of bribery. Transparency serves as a deterrent, especially when group actions are collectively visible.</td>
+        </tr>
       </tbody>
     </table>
   </div>
