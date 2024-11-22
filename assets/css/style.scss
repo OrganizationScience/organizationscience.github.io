@@ -60,22 +60,40 @@
 }
 
 #researchTable {
+  table-layout: fixed; /* Ensures all columns have equal width */
+  width: 100%;
   border: 1px solid #ddd;
   font-family: Arial, sans-serif;
   font-size: 14px;
 }
 
 #researchTable th, #researchTable td {
-  text-align: left;
   padding: 10px;
   border: 1px solid #ddd;
+  text-align: left;
+  word-wrap: break-word; /* Ensures content wraps within cells */
 }
 
-#researchTable tr:nth-child(even) {
+#researchTable thead {
+  background-color: #f4f4f4;
+}
+
+#researchTable tbody {
+  display: block;
+  max-height: 500px; /* Set max height to reduce page length */
+  overflow-y: auto; /* Add vertical scroll for long content */
+}
+
+#researchTable tbody tr {
+  display: table; /* Retains table structure within tbody */
+  width: 100%;
+}
+
+#researchTable tbody tr:nth-child(even) {
   background-color: #f9f9f9;
 }
 
-#researchTable tr:hover {
+#researchTable tbody tr:hover {
   background-color: #f1f1f1;
 }
 
@@ -83,4 +101,8 @@
   border: 1px solid #ddd;
   border-radius: 4px;
   font-size: 16px;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+  box-sizing: border-box;
 }
