@@ -11,71 +11,19 @@
   padding: 20px; /* Add spacing around content */
 }
 
-.topic {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 30px;
-  padding: 15px 0;
-  border-bottom: 1px solid #ddd;
-}
-
-.topic img {
-  flex: 0 0 200px; /* Fixed image width */
-  max-width: 200px;
-  height: auto;
-  border-radius: 8px;
-  margin-right: 20px;
-}
-
-.topic-content {
-  flex: 1;
-}
-
-.topic-content h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-.topic-content ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.topic-content ul li {
-  margin-bottom: 5px;
-}
-
-.topic-content ul li a {
-  text-decoration: none;
-  color: #007acc;
-}
-
-.topic-content ul li a:hover {
-  text-decoration: underline;
-}
-
-.more-link {
-  margin-top: 10px;
-  display: block;
-  font-weight: bold;
-  color: #007acc;
-}
-
-/* Container for tables */
+/* Container for horizontal scrolling */
 .container {
-  max-width: 100%; /* Remove width restrictions */
-  padding: 0; /* Remove unnecessary padding */
-  margin: 0 auto; /* Center the content */
-  overflow-x: auto; /* Enable horizontal scrolling for large tables */
-  white-space: nowrap; /* Prevent wrapping of table content */
+  max-width: 100%; /* Allow table to span full width */
+  overflow-x: auto; /* Add horizontal scroll bar for larger tables */
+  margin: 0 auto; /* Center the table container */
 }
 
 /* Table styling */
 #researchTable {
-  table-layout: auto; /* Dynamically adjust column widths */
-  min-width: 1200px; /* Set minimum table width to force horizontal scrolling */
+  width: 100%; /* Use the full width of the container */
+  min-width: 1200px; /* Minimum width to force scrolling for smaller screens */
   border-collapse: collapse; /* Remove gaps between table borders */
+  word-wrap: break-word; /* Ensure content wraps within cells */
 }
 
 #researchTable th,
@@ -84,12 +32,15 @@
   padding: 10px; /* Add padding for readability */
   text-align: left; /* Align text to the left */
   vertical-align: top; /* Align content to the top */
-  word-wrap: break-word; /* Prevent text from overflowing */
 }
 
 #researchTable th {
   background-color: #f4f4f4; /* Light gray for headers */
   font-weight: bold; /* Make headers bold */
+}
+
+#researchTable td {
+  white-space: normal; /* Ensure long text wraps properly */
 }
 
 #researchTable tr:nth-child(even) {
@@ -98,6 +49,12 @@
 
 #researchTable tr:hover {
   background-color: #f1f1f1; /* Highlight row on hover */
+}
+
+/* Specific styling for the Summary column */
+#researchTable td:nth-child(5) {
+  max-width: 400px; /* Limit the width of the Summary column */
+  overflow-wrap: break-word; /* Break long words to fit within the column */
 }
 
 /* Input styling for the search bar */
