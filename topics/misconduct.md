@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Organization Science
+title: [Organization Science](https://organizationscience.github.io/)
 ---
 
 # Misconduct
