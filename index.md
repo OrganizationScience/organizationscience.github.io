@@ -37,30 +37,39 @@ All Organization Science research is categorized into topic areas that collectiv
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  // Function to fetch and inject the top 5 rows
+  // Function to fetch and inject the top 5 rows using DataTables API
   function fetchTop5Rows(url, targetListId) {
     fetch(url)
       .then((response) => response.text())
       .then((html) => {
         const parser = new DOMParser();
         const doc = parser.parseFromString(html, "text/html");
-        const table = doc.querySelector("#researchTable tbody");
-        const rows = table.querySelectorAll("tr");
-        const targetList = document.getElementById(targetListId);
-        
-        for (let i = 0; i < Math.min(5, rows.length); i++) {
-          const cells = rows[i].querySelectorAll("td");
-          const category = cells[0].textContent.trim(); // Category
-          const title = cells[3].textContent.trim(); // Reference
-          
-          // Create a list item and link it to the specific row
-          const listItem = document.createElement("li");
-          listItem.innerHTML = `
-            <a href="${url}#row-${i + 1}" target="_self" style="text-decoration: none; color: #007acc;">
-              <strong>${category}:</strong> ${title}
-            </a>
-          `;
-          targetList.appendChild(listItem);
+        const tableElement = doc.querySelector("#researchTable");
+
+        // Check if DataTables is initialized on the target page
+        if (tableElement && tableElement.dataset.dtInitialized) {
+          // Use DataTables API to extract the rows
+          const dataTable = $(tableElement).DataTable();
+          const rowsData = dataTable.rows({ order: 'current' }).data(); // Get ordered rows
+
+          const targetList = document.getElementById(targetListId);
+
+          for (let i = 0; i < Math.min(5, rowsData.length); i++) {
+            const row = rowsData[i];
+            const category = row[0]; // Assuming the category is in column 0
+            const title = row[3]; // Assuming the reference is in column 3
+
+            // Create a list item and link it to the specific row
+            const listItem = document.createElement("li");
+            listItem.innerHTML = `
+              <a href="${url}#row-${i + 1}" target="_self" style="text-decoration: none; color: #007acc;">
+                <strong>${category}:</strong> ${title}
+              </a>
+            `;
+            targetList.appendChild(listItem);
+          }
+        } else {
+          console.error(`DataTables not initialized or table not found at ${url}`);
         }
       })
       .catch((error) => console.error(`Error fetching data from ${url}:`, error));
