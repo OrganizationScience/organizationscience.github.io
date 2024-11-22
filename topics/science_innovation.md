@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Organization Science
+class: science-innovation-page
 ---
 
 # Science Innovation
