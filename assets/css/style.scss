@@ -9,9 +9,9 @@
 }
 
 .featured-content {
-  max-width: 100%; /* Removes any width constraints */
-  padding: 0; /* Removes padding */
-  margin: 0 auto; /* Centers content */
+  max-width: 100%; /* Ensure content spans the page */
+  margin: 0 auto; /* Center the content */
+  padding: 20px; /* Add spacing around content */
 }
 
 .topic {
@@ -66,33 +66,32 @@
 }
 
 #researchTable {
-  table-layout: fixed; /* Ensures consistent column widths */
-  width: 100%; /* Takes up full width of the page */
-  border-collapse: collapse; /* Ensures borders align */
-  margin: 20px 0; /* Adds some space above and below */
+  table-layout: auto; /* Dynamic column sizing */
+  width: 100%; /* Full width of container */
+  border-collapse: collapse; /* Remove spacing between cells */
 }
 
 #researchTable th,
 #researchTable td {
-  border: 1px solid #ddd; /* Adds border for clarity */
-  padding: 10px; /* Adds padding for readability */
-  text-align: left; /* Aligns text to the left */
-  word-wrap: break-word; /* Wraps text within cells */
+  border: 1px solid #ddd; /* Add light borders */
+  padding: 10px; /* Add space inside cells */
+  text-align: left; /* Align text to the left */
+  vertical-align: top; /* Align content to the top */
+  word-wrap: break-word; /* Prevent content overflow */
 }
 
 #researchTable th {
-  background-color: #f4f4f4; /* Light background for headers */
-  font-weight: bold; /* Makes header text bold */
+  background-color: #f4f4f4; /* Light header background */
+  font-weight: bold; /* Bold header text */
 }
 
-#researchTable tbody tr:nth-child(even) {
-  background-color: #f9f9f9; /* Alternating row colors */
+#researchTable tr:nth-child(even) {
+  background-color: #f9f9f9; /* Alternate row colors */
 }
 
-#researchTable tbody tr:hover {
-  background-color: #f1f1f1; /* Highlights row on hover */
+#researchTable tr:hover {
+  background-color: #f1f1f1; /* Highlight row on hover */
 }
-
 
 #searchInput {
   border: 1px solid #ddd;
