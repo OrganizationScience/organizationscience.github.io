@@ -10,6 +10,7 @@ All Organization Science research is categorized into topic areas that collectiv
 ## Featured Topics
 
 <section class="featured-topics">
+  <!-- Misconduct Section -->
   <div class="topic">
     <img src="assets/images/misconduct.jpg" alt="Misconduct">
     <div class="topic-content">
@@ -20,32 +21,56 @@ All Organization Science research is categorized into topic areas that collectiv
       <a href="/topics/misconduct.html" class="more-link">More research on this topic →</a>
     </div>
   </div>
+
+  <!-- Science Innovation Section -->
+  <div class="topic">
+    <img src="assets/images/science_innovation.jpg" alt="Science Innovation">
+    <div class="topic-content">
+      <h2>Science Innovation</h2>
+      <ul id="science_innovation-top5">
+        <!-- Top 5 rows will be dynamically injected here -->
+      </ul>
+      <a href="/topics/science_innovation.html" class="more-link">More research on this topic →</a>
+    </div>
+  </div>
 </section>
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const misconductUrl = "/topics/misconduct.html";
+    // Function to fetch and inject the top 5 rows
+    function fetchTop5Rows(url, targetListId) {
+      fetch(url)
+        .then((response) => response.text())
+        .then((html) => {
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(html, "text/html");
+          const table = doc.querySelector("#researchTable tbody");
+          const rows = table.querySelectorAll("tr");
+          const targetList = document.getElementById(targetListId);
 
-    fetch(misconductUrl)
-      .then((response) => response.text())
-      .then((html) => {
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(html, "text/html");
-        const table = doc.querySelector("#researchTable tbody");
-        const rows = table.querySelectorAll("tr");
-        const misconductList = document.getElementById("misconduct-top5");
+          for (let i = 0; i < Math.min(5, rows.length); i++) {
+            const cells = rows[i].querySelectorAll("td");
+            const category = cells[0].textContent.trim(); // Category
+            const author = cells[2].textContent.trim(); // Author
+            const title = cells[3].textContent.trim(); // Title
 
-        for (let i = 0; i < Math.min(5, rows.length); i++) {
-          const cells = rows[i].querySelectorAll("td");
-          const category = cells[0].textContent;
-          const author = cells[2].textContent;
-          const summary = cells[4].textContent;
+            // Create a list item and link it to the specific row
+            const listItem = document.createElement("li");
+            listItem.innerHTML = `
+              <a href="${url}#row-${i + 1}" target="_self">
+                <strong>${category} - ${author}:</strong> ${title}
+              </a>
+            `;
+            targetList.appendChild(listItem);
+          }
+        })
+        .catch((error) => console.error(`Error fetching data from ${url}:`, error));
+    }
 
-          const listItem = document.createElement("li");
-          listItem.innerHTML = `<strong>${category} - ${author}:</strong> ${summary.slice(0, 100)}...`;
-          misconductList.appendChild(listItem);
-        }
-      })
-      .catch((error) => console.error("Error fetching misconduct data:", error));
+    // Fetch top 5 rows for Misconduct
+    fetchTop5Rows("/topics/misconduct.html", "misconduct-top5");
+
+    // Fetch top 5 rows for Science Innovation
+    fetchTop5Rows("/topics/science_innovation.html", "science_innovation-top5");
   });
 </script>
