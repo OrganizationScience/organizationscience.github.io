@@ -20,18 +20,32 @@ All Organization Science research is categorized into topic areas that collectiv
       <a href="/topics/misconduct.html" class="more-link">More research on this topic →</a>
     </div>
   </div>
-  <div class="topic">
-    <img src="assets/images/science_innovation.jpg" alt="Science and Innovation">
-    <div class="topic-content">
-      <h2>Science and Innovation</h2>
-      <ul>
-        <li><a href="/topics/science.html#innovation-drivers">Drivers of Innovation in Organizations</a></li>
-        <li><a href="/topics/science.html#collaboration">Collaboration and Knowledge Sharing</a></li>
-        <li><a href="/topics/science.html#impact">Impact of Science and Innovation on Business</a></li>
-      </ul>
-      <a href="/topics/science.html" class="more-link">More research on this topic →</a>
-    </div>
-  </div>
 </section>
 
-<script src="/assets/js/misconduct-top5.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const misconductUrl = "/topics/misconduct.html";
+
+    fetch(misconductUrl)
+      .then((response) => response.text())
+      .then((html) => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, "text/html");
+        const table = doc.querySelector("#researchTable tbody");
+        const rows = table.querySelectorAll("tr");
+        const misconductList = document.getElementById("misconduct-top5");
+
+        for (let i = 0; i < Math.min(5, rows.length); i++) {
+          const cells = rows[i].querySelectorAll("td");
+          const category = cells[0].textContent;
+          const author = cells[2].textContent;
+          const summary = cells[4].textContent;
+
+          const listItem = document.createElement("li");
+          listItem.innerHTML = `<strong>${category} - ${author}:</strong> ${summary.slice(0, 100)}...`;
+          misconductList.appendChild(listItem);
+        }
+      })
+      .catch((error) => console.error("Error fetching misconduct data:", error));
+  });
+</script>
