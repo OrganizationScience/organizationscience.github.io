@@ -1,43 +1,31 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // URL of the misconduct.html page
   const misconductUrl = "/topics/misconduct.html";
 
-  // Fetch the misconduct page content
   fetch(misconductUrl)
     .then((response) => response.text())
     .then((html) => {
-      // Parse the fetched HTML
       const parser = new DOMParser();
       const doc = parser.parseFromString(html, "text/html");
+      const table = doc.querySelector("#researchTable tbody");
+      const rows = table.querySelectorAll("tr");
+      const misconductList = document.getElementById("misconduct-top5");
 
-      // Select the table from the misconduct page
-      const misconductTable = doc.querySelector("#researchTable tbody");
-
-      if (misconductTable) {
-        const top5Rows = misconductTable.querySelectorAll("tr");
-        const misconductList = document.getElementById("misconduct-top5");
-
-        // Append top 5 rows to the misconduct list
-        for (let i = 0; i < Math.min(5, top5Rows.length); i++) {
-          const row = top5Rows[i];
+      rows.forEach((row, index) => {
+        if (index < 5) { // Limit to top 5 rows
           const cells = row.querySelectorAll("td");
+          const author = cells[2].textContent.trim(); // Author(s)
+          const title = cells[3].textContent.trim(); // Title
+          const rowId = `row-${index + 1}`; // Use dynamically generated IDs
 
-          if (cells.length > 0) {
-            const author = cells[2].textContent; // Author(s)
-            const title = cells[3].textContent; // Title
-
-            const listItem = document.createElement("li");
-            listItem.innerHTML = `
-              <a href="${misconductUrl}#row${i + 1}" target="_self">
-                <strong>${author}:</strong> ${title}
-              </a>
-            `;
-            misconductList.appendChild(listItem);
-          }
+          const listItem = document.createElement("li");
+          listItem.innerHTML = `
+            <a href="${misconductUrl}#${rowId}" target="_self">
+              <strong>${author}:</strong> ${title}
+            </a>
+          `;
+          misconductList.appendChild(listItem);
         }
-      }
+      });
     })
-    .catch((error) => {
-      console.error("Error fetching the misconduct page:", error);
-    });
+    .catch((error) => console.error("Error fetching misconduct data:", error));
 });
