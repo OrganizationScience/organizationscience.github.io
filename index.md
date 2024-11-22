@@ -37,20 +37,24 @@ All Organization Science research is categorized into topic areas that collectiv
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  // Function to fetch and inject the top 5 rows
   function fetchTop5Rows(url, targetListId) {
     fetch(url)
       .then((response) => response.text())
       .then((html) => {
         const parser = new DOMParser();
         const doc = parser.parseFromString(html, "text/html");
-        const table = doc.querySelector("#misconductTable tbody"); // Update the table ID based on your .md content
+        const table = doc.querySelector("#misconductTable tbody"); // Ensure the table ID matches
+
         if (!table) {
           console.error(`Table not found in ${url}`);
           return;
         }
+
         const rows = table.querySelectorAll("tr");
         const targetList = document.getElementById(targetListId);
+
+        // Clear any existing rows to prevent duplication
+        targetList.innerHTML = "";
 
         // Inject top 5 rows
         for (let i = 0; i < Math.min(5, rows.length); i++) {
