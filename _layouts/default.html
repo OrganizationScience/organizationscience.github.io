@@ -137,44 +137,50 @@
 
   <!-- Fetch and Inject Top 5 Rows -->
   <script>
-      document.addEventListener('DOMContentLoaded', function () {
-          function fetchTop5Rows(url, targetListId) {
-              fetch(url)
-                  .then(response => response.text())
-                  .then(html => {
-                      const parser = new DOMParser();
-                      const doc = parser.parseFromString(html, "text/html");
-                      const table = doc.querySelector("#misconductTable tbody");
-                      if (!table) {
-                          console.error(`Table not found in ${url}`);
-                          return;
-                      }
-                      const rows = table.querySelectorAll("tr");
-                      const targetList = document.getElementById(targetListId);
-
-                      for (let i = 0; i < Math.min(5, rows.length); i++) {
-                          const cells = rows[i].querySelectorAll("td");
-                          const category = cells[0].textContent.trim();
-                          const title = cells[3].textContent.trim();
-
-                          const listItem = document.createElement("li");
-                          listItem.innerHTML = `
-                              <a href="${url}#row-${i + 1}" target="_self" style="text-decoration: none; color: #007acc;">
-                                  <strong>${category}:</strong> ${title}
-                              </a>
-                          `;
-                          targetList.appendChild(listItem);
-                      }
-                  })
-                  .catch(error => console.error(`Error fetching data from ${url}:`, error));
+  document.addEventListener("DOMContentLoaded", function () {
+    function fetchTop5Rows(url, targetListId) {
+      fetch(url)
+        .then((response) => response.text())
+        .then((html) => {
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(html, "text/html");
+          const table = doc.querySelector("#misconductTable tbody");
+  
+          if (!table) {
+            console.error(`Table not found in ${url}`);
+            return;
           }
-
-          // Fetch top 5 rows for Misconduct
-          fetchTop5Rows("/topics/misconduct.html", "misconduct-top5");
-
-          // Fetch top 5 rows for Science Innovation
-          fetchTop5Rows("/topics/science_innovation.html", "science_innovation-top5");
-      });
+  
+          const rows = table.querySelectorAll("tr");
+          const targetList = document.getElementById(targetListId);
+  
+          // ** Clear the target list before appending rows **
+          targetList.innerHTML = "";
+  
+          // Inject top 5 rows
+          for (let i = 0; i < Math.min(5, rows.length); i++) {
+            const cells = rows[i].querySelectorAll("td");
+            const category = cells[0].textContent.trim(); // Category
+            const title = cells[3].textContent.trim(); // Reference
+  
+            const listItem = document.createElement("li");
+            listItem.innerHTML = `
+              <a href="${url}#row-${i + 1}" target="_self" style="text-decoration: none; color: #007acc;">
+                <strong>${category}:</strong> ${title}
+              </a>
+            `;
+            targetList.appendChild(listItem);
+          }
+        })
+        .catch((error) => console.error(`Error fetching data from ${url}:`, error));
+    }
+  
+    // Fetch top 5 rows for Misconduct
+    fetchTop5Rows("/topics/misconduct.html", "misconduct-top5");
+  
+    // Fetch top 5 rows for Science Innovation
+    fetchTop5Rows("/topics/science_innovation.html", "science_innovation-top5");
+  });
   </script>
 </body>
 </html>
