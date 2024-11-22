@@ -57,6 +57,41 @@ Explore research on misconduct, categorized into Antecedents, Consequences, and 
 <!-- Initialize DataTables -->
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-      $('#misconductTable').DataTable();
+    // Initialize DataTables
+    $('#misconductTable').DataTable();
+
+    // Assign unique IDs to each row
+    const rows = document.querySelectorAll('#misconductTable tbody tr');
+    rows.forEach((row, index) => {
+      row.id = `row-${index + 1}`; // Assign a unique ID
+    });
+
+    // Highlight the specific row based on URL hash
+    const hash = window.location.hash;
+    if (hash) {
+      const targetRow = document.querySelector(hash);
+      if (targetRow) {
+        targetRow.scrollIntoView({ behavior: 'smooth', block: 'center' }); // Scroll to the row
+        targetRow.classList.add('highlight'); // Add highlight class
+        setTimeout(() => targetRow.classList.remove('highlight'), 3000); // Remove highlight after 3 seconds
+      }
+    }
   });
 </script>
+
+<!-- Highlight CSS -->
+<style>
+  .highlight {
+    background-color: #ffeb3b; /* Light yellow */
+    animation: fadeOutHighlight 3s forwards;
+  }
+
+  @keyframes fadeOutHighlight {
+    0% {
+      background-color: #ffeb3b;
+    }
+    100% {
+      background-color: transparent;
+    }
+  }
+</style>
