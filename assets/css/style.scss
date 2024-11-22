@@ -1,14 +1,14 @@
 @import 'jekyll-theme-cayman';
 
-/* Custom styles for featured topics */
+/* General styling for all pages */
 .featured-topics {
   margin-top: 20px;
 }
 
 .featured-content {
-  max-width: 100%; /* Ensure content spans the page */
-  margin: 0 auto; /* Center the content */
-  padding: 20px; /* Add spacing around content */
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .topic {
@@ -62,41 +62,50 @@
   color: #007acc;
 }
 
-.container {
-  max-width: 90%; /* Reduce container width for better balance */
-  padding: 0 10px; /* Add padding to prevent content from touching edges */
-  margin: 0 auto; /* Center the content */
-  overflow-x: auto; /* Allow horizontal scrolling if table overflows */
+/* Table container and table styling (Scoped) */
+.misconduct-page .container,
+.science-innovation-page .container {
+  max-width: 90%; /* Adjust container width */
+  padding: 0 10px; /* Add padding */
+  margin: 0 auto;
+  overflow-x: auto; /* Allow horizontal scrolling */
 }
 
-#researchTable {
-  table-layout: auto; /* Dynamically adjust column widths */
-  width: 100%; /* Make table span the full container width */
-  border-collapse: collapse; /* Remove gaps between table borders */
+.misconduct-page #researchTable,
+.science-innovation-page #researchTable {
+  table-layout: auto;
+  width: 100%; /* Make table span the full container */
+  border-collapse: collapse;
 }
 
-#researchTable th,
-#researchTable td {
-  border: 1px solid #ddd; /* Add visible borders for cells */
-  padding: 10px; /* Add padding for readability */
-  text-align: left; /* Align text to the left */
-  vertical-align: top; /* Align content to the top */
-  word-wrap: break-word; /* Prevent text from overflowing */
+.misconduct-page #researchTable th,
+.science-innovation-page #researchTable th,
+.misconduct-page #researchTable td,
+.science-innovation-page #researchTable td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+  vertical-align: top;
+  word-wrap: break-word;
 }
 
-#researchTable th {
-  background-color: #f4f4f4; /* Light gray for headers */
-  font-weight: bold; /* Make headers bold */
+.misconduct-page #researchTable th,
+.science-innovation-page #researchTable th {
+  background-color: #f4f4f4;
+  font-weight: bold;
 }
 
-#researchTable tr:nth-child(even) {
-  background-color: #f9f9f9; /* Alternating row colors */
+.misconduct-page #researchTable tr:nth-child(even),
+.science-innovation-page #researchTable tr:nth-child(even) {
+  background-color: #f9f9f9;
 }
 
-#researchTable tr:hover {
-  background-color: #f1f1f1; /* Highlight row on hover */
+.misconduct-page #researchTable tr:hover,
+.science-innovation-page #researchTable tr:hover {
+  background-color: #f1f1f1;
 }
 
+/* Input styling for the search bar */
 #searchInput {
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -107,15 +116,18 @@
   box-sizing: border-box;
 }
 
-/* Responsive Design */
+/* Responsive behavior */
 @media (max-width: 768px) {
-  #researchTable th,
-  #researchTable td {
-    font-size: 14px; /* Adjust font size for smaller screens */
-    padding: 8px; /* Reduce padding for smaller screens */
+  .misconduct-page #researchTable th,
+  .science-innovation-page #researchTable th,
+  .misconduct-page #researchTable td,
+  .science-innovation-page #researchTable td {
+    font-size: 14px;
+    padding: 8px;
   }
 
-  #researchTable td:nth-child(5) {
-    max-width: 300px; /* Limit Summary column width for smaller devices */
+  .misconduct-page #researchTable td:nth-child(5),
+  .science-innovation-page #researchTable td:nth-child(5) {
+    max-width: 300px;
   }
 }
