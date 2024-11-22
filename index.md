@@ -37,13 +37,13 @@ All Organization Science research is categorized into topic areas that collectiv
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  function fetchTop5Rows(url, targetListId) {
+  function fetchTop5Rows(url, targetListId, tableId) {
     fetch(url)
       .then((response) => response.text())
       .then((html) => {
         const parser = new DOMParser();
         const doc = parser.parseFromString(html, "text/html");
-        const table = doc.querySelector("#misconductTable tbody"); // Ensure the table ID matches
+        const table = doc.querySelector(`#${tableId} tbody`); // Use the dynamic table ID
 
         if (!table) {
           console.error(`Table not found in ${url}`);
@@ -76,9 +76,9 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Fetch top 5 rows for Misconduct
-  fetchTop5Rows("/topics/misconduct.html", "misconduct-top5");
+  fetchTop5Rows("/topics/misconduct.html", "misconduct-top5", "misconductTable");
 
   // Fetch top 5 rows for Science Innovation
-  fetchTop5Rows("/topics/science_innovation.html", "science_innovation-top5");
+  fetchTop5Rows("/topics/science_innovation.html", "science_innovation-top5", "science_innovationTable");
 });
 </script>
