@@ -19,10 +19,10 @@ Explore research on misconduct, categorized into Antecedents, Consequences, and 
       <thead>
         <tr>
           <th style="width: 15%;">Category</th>
-          <th style="width: 20%;">Subcategory</th>
-          <th style="width: 20%;">Author(s)</th>
-          <th style="width: 25%;">Title</th>
-          <th style="width: 40%;">Summary</th>
+          <th style="width: 15%;">Subcategory</th>
+          <th style="width: 15%;">Author(s)</th>
+          <th style="width: 20%;">Title</th>
+          <th style="width: 35%;">Summary</th>
         </tr>
       </thead>
       <tbody>
