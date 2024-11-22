@@ -18,13 +18,20 @@
 
     .nav-bar {
       width: 250px;
-      background-color: #157878;
-      color: white;
       height: 100vh;
       padding: 20px;
       position: fixed;
       top: 0;
       left: 0;
+      border-right: 2px solid #157878; /* Add a border to distinguish from the main content */
+      background-color: transparent; /* Transparent background */
+    }
+
+    .nav-bar h2 {
+      font-size: 18px;
+      font-weight: bold;
+      color: #157878; /* Green color */
+      margin-bottom: 20px;
     }
 
     .nav-bar ul {
@@ -33,16 +40,21 @@
     }
 
     .nav-bar ul li {
-      margin: 10px 0;
+      margin: 15px 0;
     }
 
     .nav-bar ul li a {
-      color: white;
+      color: #157878; /* Green text */
+      font-weight: bold; /* Bold text */
       text-decoration: none;
     }
 
+    .nav-bar ul li a:hover {
+      text-decoration: underline; /* Add underline effect on hover */
+    }
+
     .content-container {
-      margin-left: 270px;
+      margin-left: 270px; /* Adjust content to make space for the nav bar */
       padding: 20px;
       width: calc(100% - 270px);
     }
