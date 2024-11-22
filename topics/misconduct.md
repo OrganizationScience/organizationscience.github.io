@@ -44,3 +44,12 @@ Explore research on misconduct, categorized into Antecedents, Consequences, and 
     </table>
   </div>
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const rows = document.querySelectorAll("#researchTable tbody tr");
+    rows.forEach((row, index) => {
+      row.id = `row-${index + 1}`; // Dynamically generate IDs for rows
+    });
+  });
+</script>
