@@ -21,10 +21,10 @@ title: Organization Science Blog
 
     <section class="featured-topics">
       <div class="topic">
-        <img src="assets/images/misconduct.jpg" alt="Misconduct">
+        <img src="assets/images/misconduct.jpg" alt="Misconduct" style="width: 100px; margin: auto;">
         <div class="topic-content">
           <h3>Misconduct</h3>
-          <ul id="misconduct-top5">
+          <ul id="misconduct-top5" style="list-style: none; padding: 0;">
             <!-- Top 5 rows will be dynamically injected here -->
           </ul>
           <a href="/topics/misconduct.html" class="more-link">More research on this topic →</a>
@@ -54,9 +54,10 @@ title: Organization Science Blog
           const author = cells[2].textContent.trim();
 
           const listItem = document.createElement("li");
+          listItem.style.marginBottom = "10px";
           listItem.innerHTML = `
             <strong>${author}</strong> - <em>${category}</em>, ${subcategory} 
-            (<a href="${misconductUrl}#row-${i}">View Details</a>)
+            (<a href="${misconductUrl}#row-${i}" style="color: #157878;">View Details</a>)
           `;
           misconductList.appendChild(listItem);
         }
