@@ -12,14 +12,14 @@ Search for authors, categories, or keywords:
 
 <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search for authors, categories, or keywords..." style="width: 100%; padding: 10px; margin-bottom: 20px;">
 
-<table id="researchTable" style="width: 100%; border-collapse: collapse;">
+<table id="researchTable">
   <thead>
-    <tr style="background-color: #f4f4f4;">
-      <th style="padding: 10px; border: 1px solid #ddd;">Category</th>
-      <th style="padding: 10px; border: 1px solid #ddd;">Subcategory</th>
-      <th style="padding: 10px; border: 1px solid #ddd;">Author(s)</th>
-      <th style="padding: 10px; border: 1px solid #ddd;">Reference</th>
-      <th style="padding: 10px; border: 1px solid #ddd;">Summary</th>
+    <tr>
+      <th style="width: 15%;">Category</th>
+      <th style="width: 20%;">Subcategory</th>
+      <th style="width: 20%;">Author(s)</th>
+      <th style="width: 25%;">Reference</th>
+      <th style="width: 40%;">Summary</th>
     </tr>
   </thead>
   <tbody>
