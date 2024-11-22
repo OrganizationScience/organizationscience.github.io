@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Misconduct
+title: Organization Science
 ---
 
 # Misconduct
