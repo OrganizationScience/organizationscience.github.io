@@ -61,42 +61,32 @@
 
 #researchTable {
   table-layout: fixed; /* Ensures consistent column widths */
-  width: 100%; /* Use full available width */
-  border: 1px solid #ddd;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
+  width: 100%; /* Takes up full width of the page */
+  border-collapse: collapse; /* Ensures borders align */
+  margin: 20px 0; /* Adds some space above and below */
 }
 
-#researchTable th, #researchTable td {
-  padding: 10px;
-  border: 1px solid #ddd;
-  text-align: left;
-  word-wrap: break-word; /* Prevents overflow by wrapping text */
+#researchTable th,
+#researchTable td {
+  border: 1px solid #ddd; /* Adds border for clarity */
+  padding: 10px; /* Adds padding for readability */
+  text-align: left; /* Aligns text to the left */
+  word-wrap: break-word; /* Wraps text within cells */
 }
 
 #researchTable th {
-  background-color: #f4f4f4; /* Light gray background for headers */
+  background-color: #f4f4f4; /* Light background for headers */
+  font-weight: bold; /* Makes header text bold */
 }
 
-#researchTable tbody {
-  display: block; /* Makes table scrollable */
-  max-height: 600px; /* Limit table height */
-  overflow-y: auto; /* Add vertical scrollbar if content exceeds height */
+#researchTable tbody tr:nth-child(even) {
+  background-color: #f9f9f9; /* Alternating row colors */
 }
 
-#researchTable tr {
-  display: table;
-  width: 100%; /* Ensure rows take full width */
-  table-layout: fixed; /* Maintain consistent layout */
+#researchTable tbody tr:hover {
+  background-color: #f1f1f1; /* Highlights row on hover */
 }
 
-#researchTable tr:nth-child(even) {
-  background-color: #f9f9f9; /* Alternate row colors */
-}
-
-#researchTable tr:hover {
-  background-color: #f1f1f1; /* Highlight row on hover */
-}
 
 #searchInput {
   border: 1px solid #ddd;
