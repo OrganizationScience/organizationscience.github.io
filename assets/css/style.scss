@@ -75,6 +75,7 @@
   width: 100%; /* Ensure the table spans the full container */
   border-collapse: collapse; /* Remove gaps between table borders */
   margin-bottom: 20px; /* Add spacing below the table */
+  font-size: 16px; /* Standard font size */
 }
 
 #researchTable th,
@@ -117,6 +118,15 @@
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
+  .topic {
+    flex-direction: column; /* Stack image and content vertically */
+  }
+
+  .topic img {
+    max-width: 100%; /* Allow full-width images on smaller screens */
+    margin-bottom: 10px; /* Add spacing below the image */
+  }
+
   #researchTable th,
   #researchTable td {
     font-size: 14px; /* Adjust font size for smaller screens */
@@ -130,4 +140,32 @@
   #researchTable {
     font-size: 14px; /* Smaller font size for smaller screens */
   }
+
+  #searchInput {
+    font-size: 14px; /* Adjust input font size */
+    padding: 8px; /* Adjust padding */
+  }
 }
+
+/* Custom adjustments for DataTables */
+.dataTables_wrapper {
+  margin-top: 20px; /* Add spacing above DataTables */
+}
+
+.dataTables_filter {
+  float: right; /* Align search input to the right */
+}
+
+.dataTables_paginate {
+  float: right; /* Align pagination controls to the right */
+}
+
+.dataTables_info {
+  margin-top: 10px; /* Add spacing above info text */
+  font-size: 14px; /* Smaller font size for info text */
+}
+
+.dataTables_length {
+  margin-bottom: 10px; /* Add spacing below length dropdown */
+}
+
