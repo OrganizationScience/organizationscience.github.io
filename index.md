@@ -51,8 +51,8 @@ All Organization Science research is categorized into topic areas that collectiv
           for (let i = 0; i < Math.min(5, rows.length); i++) {
             const cells = rows[i].querySelectorAll("td");
             const category = cells[0].textContent.trim(); // Category
-            const author = cells[2].textContent.trim(); // Author
-            const title = cells[3].textContent.trim(); // Title
+            // const author = cells[2].textContent.trim(); // Author
+            const title = cells[3].textContent.trim(); // Reference
 
             // Create a list item and link it to the specific row
             const listItem = document.createElement("li");
