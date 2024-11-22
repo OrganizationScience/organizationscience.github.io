@@ -8,6 +8,12 @@
   margin-top: 20px;
 }
 
+.featured-content {
+  max-width: 100%; /* Removes any width constraints */
+  padding: 0; /* Removes padding */
+  margin: 0 auto; /* Centers content */
+}
+
 .topic {
   display: flex;
   align-items: flex-start;
