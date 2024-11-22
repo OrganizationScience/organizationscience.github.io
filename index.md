@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Research Topics
+title: Organization Science Blog
 ---
 
 # Research Topics
