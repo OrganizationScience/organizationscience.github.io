@@ -168,3 +168,19 @@
 .dataTables_length {
   margin-bottom: 10px; /* Add spacing below length dropdown */
 }
+
+/* Highlight row */
+.highlight {
+  background-color: #ffeb3b; /* Light yellow highlight */
+  animation: fadeOutHighlight 3s forwards;
+}
+
+/* Smooth fading effect */
+@keyframes fadeOutHighlight {
+  0% {
+    background-color: #ffeb3b;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
