@@ -14,13 +14,13 @@ title: Organization Science Blog
 </div>
 
 <div class="main-content">
-  <header class="header">
+  <header>
     <h1>
       <a href="https://organizationscience.github.io/" style="text-decoration: none; color: inherit;">
         Organization Science
       </a>
     </h1>
-    <h2>Official Blog of Academic Journal "Organization Science".</h2>
+    <h2>Official Blog of Academic Journal "Organization Science"</h2>
   </header>
 
   <h2>Research Topics</h2>
