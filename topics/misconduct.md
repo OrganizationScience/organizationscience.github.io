@@ -13,6 +13,7 @@ Explore research on misconduct, categorized into Antecedents, Consequences, and 
 
   <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search for authors, categories, or keywords..." style="width: 100%; padding: 10px; margin-bottom: 20px;">
 
+<div class="container">
   <div style="overflow-x: auto;">
     <table id="researchTable">
       <thead>
@@ -25,7 +26,6 @@ Explore research on misconduct, categorized into Antecedents, Consequences, and 
         </tr>
       </thead>
       <tbody>
-        <!-- Antecedents Rows -->
         <tr>
           <td>Antecedents</td>
           <td>Drivers and Preventive Factors</td>
@@ -39,22 +39,6 @@ Explore research on misconduct, categorized into Antecedents, Consequences, and 
           <td>Chambers (2024)</td>
           <td>Chambers, C. R. (2024). Nonmonetary reward systems, counterproductive behavior, and responses to sanctions in open collaboration environments. Organization Science, 35(3), 928-947.</td>
           <td>This research investigates how nonmonetary rewards and sanctions impact counterproductive behaviors in collaborative work environments. Findings indicate that nonmonetary rewards can reduce negative behaviors, but sanctions have varying effects depending on the severity of the infraction.</td>
-        </tr>
-        <!-- Consequences Rows -->
-        <tr>
-          <td>Consequences</td>
-          <td>Impact of Misconduct</td>
-          <td>Dimitriadis (2024)</td>
-          <td>Dimitriadis, S. (2024). Bribery, insecurity, and firm performance: Evidence from the Boko Haram insurgency in Nigeria. Strategic Management Journal.</td>
-          <td>This research investigates the impact of bribery and insecurity on firm performance during the Boko Haram insurgency in Nigeria. Results show that firms engaged in bribery are less resilient to external threats, underscoring the detriment of corruption during crises.</td>
-        </tr>
-        <!-- Reactions Rows -->
-        <tr>
-          <td>Reactions</td>
-          <td>Responses to Misconduct</td>
-          <td>Berry & Hildreth (2024)</td>
-          <td>Berry, Z., & Hildreth, J. A. D. (2024). When Your Friend is My Friend: How Loyalty Prompts Support for Indirect Ties in Moral Dilemmas. Organization Science.</td>
-          <td>The authors explore how loyalty impacts support for indirect ties in moral dilemmas, revealing that people are more likely to support third parties connected through shared acquaintances in situations requiring loyalty.</td>
         </tr>
       </tbody>
     </table>
