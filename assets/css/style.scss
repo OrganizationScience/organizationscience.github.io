@@ -58,3 +58,29 @@
   font-weight: bold;
   color: #007acc;
 }
+
+#researchTable {
+  border: 1px solid #ddd;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+#researchTable th, #researchTable td {
+  text-align: left;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+#researchTable tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+#researchTable tr:hover {
+  background-color: #f1f1f1;
+}
+
+#searchInput {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
