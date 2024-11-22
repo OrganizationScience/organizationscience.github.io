@@ -14,10 +14,8 @@ All Organization Science research is categorized into topic areas that collectiv
     <img src="assets/images/misconduct.jpg" alt="Misconduct">
     <div class="topic-content">
       <h2>Misconduct</h2>
-      <ul>
-        <li><a href="/topics/misconduct.html#antecedents">Antecedents: Understanding Drivers and Preventive Factors</a></li>
-        <li><a href="/topics/misconduct.html#consequences">Consequences: Impact of Misconduct on Organizations</a></li>
-        <li><a href="/topics/misconduct.html#reactions">Reactions: Responses to and Perceptions of Misconduct</a></li>
+      <ul id="misconduct-top5">
+        <!-- Top 5 rows will be dynamically injected here -->
       </ul>
       <a href="/topics/misconduct.html" class="more-link">More research on this topic →</a>
     </div>
@@ -27,11 +25,12 @@ All Organization Science research is categorized into topic areas that collectiv
     <div class="topic-content">
       <h2>Science and Innovation</h2>
       <ul>
-        <li><a href="/topics/science.html#innovation-drivers">Drivers of Innovation in Organizations</a></li>
-        <li><a href="/topics/science.html#collaboration">Collaboration and Knowledge Sharing</a></li>
-        <li><a href="/topics/science.html#impact">Impact of Science and Innovation on Business</a></li>
+      <ul id="science_innovation-top5">
+        <!-- Top 5 rows will be dynamically injected here -->
       </ul>
       <a href="/topics/science.html" class="more-link">More research on this topic →</a>
     </div>
   </div>
 </section>
+
+<script src="/assets/js/misconduct-top5.js"></script>
