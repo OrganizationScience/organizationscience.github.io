@@ -8,15 +8,9 @@ class: science-innovation-page
 
 Explore research on science innovation, categorized into Antecedents, Consequences, and Reactions, which collectively analyze strategy.
 
-## Search
-<div class="featured-content">
-  Search for authors, categories, or keywords:
-
-  <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search for authors, categories, or keywords..." style="width: 100%; padding: 10px; margin-bottom: 20px;">
-
 <div class="container">
   <div style="overflow-x: auto;">
-    <table id="researchTable">
+    <table id="researchTable" class="display">
       <thead>
         <tr>
           <th style="width: 15%;">Category</th>
@@ -46,12 +40,51 @@ Explore research on science innovation, categorized into Antecedents, Consequenc
   </div>
 </div>
 
+<!-- Scripts -->
+<!-- Include jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Include DataTables JS -->
+<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+
+<!-- Initialize DataTables -->
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const rows = document.querySelectorAll("#researchTable tbody tr");
+  document.addEventListener('DOMContentLoaded', function () {
+    // Initialize DataTables
+    $('#researchTable').DataTable();
+
+    // Assign unique IDs to each row
+    const rows = document.querySelectorAll('#researchTable tbody tr');
     rows.forEach((row, index) => {
-      row.id = `row-${index + 1}`; // Dynamically generate IDs for rows
+      row.id = `row-${index + 1}`; // Assign a unique ID
     });
+
+    // Highlight the specific row based on URL hash
+    const hash = window.location.hash;
+    if (hash) {
+      const targetRow = document.querySelector(hash);
+      if (targetRow) {
+        targetRow.scrollIntoView({ behavior: 'smooth', block: 'center' }); // Scroll to the row
+        targetRow.classList.add('highlight'); // Add highlight class
+        setTimeout(() => targetRow.classList.remove('highlight'), 3000); // Remove highlight after 3 seconds
+      }
+    }
   });
 </script>
 
+<!-- Highlight CSS -->
+<style>
+  .highlight {
+    background-color: #ffeb3b; /* Light yellow */
+    animation: fadeOutHighlight 3s forwards;
+  }
+
+  @keyframes fadeOutHighlight {
+    0% {
+      background-color: #ffeb3b;
+    }
+    100% {
+      background-color: transparent;
+    }
+  }
+</style>
