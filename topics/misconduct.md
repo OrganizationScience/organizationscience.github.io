@@ -46,10 +46,32 @@ Explore research on misconduct, categorized into Antecedents, Consequences, and 
 </div>
 
 <script>
+  // Dynamically assign IDs to table rows
   document.addEventListener("DOMContentLoaded", function () {
     const rows = document.querySelectorAll("#researchTable tbody tr");
     rows.forEach((row, index) => {
-      row.id = `row-${index + 1}`; // Dynamically generate IDs for rows
+      row.id = `row-${index + 1}`; // Assign unique ID to each row
     });
   });
+
+  // Search Table Functionality
+  function searchTable() {
+    const input = document.getElementById("searchInput");
+    const filter = input.value.toLowerCase();
+    const table = document.getElementById("researchTable");
+    const rows = table.querySelectorAll("tbody tr");
+
+    rows.forEach((row) => {
+      const cells = row.querySelectorAll("td");
+      const rowText = Array.from(cells)
+        .map((cell) => cell.textContent.toLowerCase())
+        .join(" "); // Concatenate all cell values in the row
+
+      if (rowText.includes(filter)) {
+        row.style.display = ""; // Show the row if it matches the filter
+      } else {
+        row.style.display = "none"; // Hide the row if it doesn't match the filter
+      }
+    });
+  }
 </script>
