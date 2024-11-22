@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .then((html) => {
       const parser = new DOMParser();
       const doc = parser.parseFromString(html, "text/html");
+
       const table = doc.querySelector("#researchTable tbody");
       const rows = table.querySelectorAll("tr");
       const misconductList = document.getElementById("misconduct-top5");
@@ -15,11 +16,11 @@ document.addEventListener("DOMContentLoaded", function () {
           const cells = row.querySelectorAll("td");
           const author = cells[2].textContent.trim(); // Author(s)
           const title = cells[3].textContent.trim(); // Title
-          const rowId = `row-${index + 1}`; // Use dynamically generated IDs
 
+          // Generate the link for each row
           const listItem = document.createElement("li");
           listItem.innerHTML = `
-            <a href="${misconductUrl}#${rowId}" target="_self">
+            <a href="${misconductUrl}#row-${index + 1}" target="_self">
               <strong>${author}:</strong> ${title}
             </a>
           `;
