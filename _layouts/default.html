@@ -25,20 +25,22 @@
 
     /* Navigation Bar */
     .nav-bar {
-      width: 100%; /* Make the nav bar span full width */
+      width: 100%; /* Full width */
       background-color: transparent; /* Transparent background */
       color: #157878;
-      padding: 10px 20px;
-      border-bottom: 2px solid #157878; /* Add a bottom border for separation */
-      text-align: left;
+      padding: 10px 0;
+      border-bottom: 2px solid #157878; /* Bottom border for separation */
+      display: flex;
+      justify-content: center; /* Center align the content horizontally */
+      align-items: center; /* Center align the content vertically */
     }
 
     .nav-bar ul {
       list-style-type: none;
       padding: 0;
       margin: 0;
-      display: flex;
-      gap: 20px; /* Add space between items */
+      display: flex; /* Horizontal alignment */
+      gap: 20px; /* Space between items */
     }
 
     .nav-bar ul li {
@@ -46,7 +48,7 @@
     }
 
     .nav-bar ul li a {
-      color: #157878; /* Green color */
+      color: #157878; /* Green text */
       font-weight: bold; /* Bold text */
       text-decoration: none;
     }
@@ -69,7 +71,8 @@
     /* Responsive Adjustments */
     @media (max-width: 768px) {
       .nav-bar ul {
-        flex-direction: column; /* Stack links vertically on smaller screens */
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        gap: 10px; /* Reduce gap between items */
       }
     }
   </style>
