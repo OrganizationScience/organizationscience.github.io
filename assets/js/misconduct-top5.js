@@ -21,12 +21,17 @@ document.addEventListener("DOMContentLoaded", function () {
         for (let i = 0; i < Math.min(5, top5Rows.length); i++) {
           const row = top5Rows[i];
           const cells = row.querySelectorAll("td");
+
           if (cells.length > 0) {
-            const title = cells[2].textContent; // Author(s)
-            const summary = cells[4].textContent; // Summary
+            const author = cells[2].textContent; // Author(s)
+            const title = cells[3].textContent; // Title
 
             const listItem = document.createElement("li");
-            listItem.innerHTML = `<strong>${title}:</strong> ${summary.slice(0, 100)}...`;
+            listItem.innerHTML = `
+              <a href="${misconductUrl}#row${i + 1}" target="_self">
+                <strong>${author}:</strong> ${title}
+              </a>
+            `;
             misconductList.appendChild(listItem);
           }
         }
