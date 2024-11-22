@@ -65,28 +65,34 @@
   color: #007acc;
 }
 
+.container {
+  max-width: 100%; /* Remove width restrictions */
+  padding: 0; /* Remove unnecessary padding */
+  margin: 0 auto; /* Center the content */
+}
+
 #researchTable {
-  table-layout: auto; /* Dynamic column sizing */
-  width: 100%; /* Full width of container */
-  border-collapse: collapse; /* Remove spacing between cells */
+  table-layout: auto; /* Dynamically adjust column widths */
+  width: 100%; /* Make table span the full width */
+  border-collapse: collapse; /* Remove gaps between table borders */
 }
 
 #researchTable th,
 #researchTable td {
-  border: 1px solid #ddd; /* Add light borders */
-  padding: 10px; /* Add space inside cells */
+  border: 1px solid #ddd; /* Add visible borders for cells */
+  padding: 10px; /* Add padding for readability */
   text-align: left; /* Align text to the left */
   vertical-align: top; /* Align content to the top */
-  word-wrap: break-word; /* Prevent content overflow */
+  word-wrap: break-word; /* Prevent text from overflowing */
 }
 
 #researchTable th {
-  background-color: #f4f4f4; /* Light header background */
-  font-weight: bold; /* Bold header text */
+  background-color: #f4f4f4; /* Light gray for headers */
+  font-weight: bold; /* Make headers bold */
 }
 
 #researchTable tr:nth-child(even) {
-  background-color: #f9f9f9; /* Alternate row colors */
+  background-color: #f9f9f9; /* Alternating row colors */
 }
 
 #researchTable tr:hover {
