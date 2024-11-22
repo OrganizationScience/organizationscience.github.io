@@ -1,6 +1,3 @@
----
----
-
 @import 'jekyll-theme-cayman';
 
 /* Custom styles for featured topics */
@@ -66,14 +63,15 @@
 }
 
 .container {
-  max-width: 100%; /* Remove width restrictions */
-  padding: 0; /* Remove unnecessary padding */
+  max-width: 90%; /* Reduce container width for better balance */
+  padding: 0 10px; /* Add padding to prevent content from touching edges */
   margin: 0 auto; /* Center the content */
+  overflow-x: auto; /* Allow horizontal scrolling if table overflows */
 }
 
 #researchTable {
   table-layout: auto; /* Dynamically adjust column widths */
-  width: 100%; /* Make table span the full width */
+  width: 100%; /* Make table span the full container width */
   border-collapse: collapse; /* Remove gaps between table borders */
 }
 
@@ -107,4 +105,17 @@
   width: 100%;
   margin-bottom: 20px;
   box-sizing: border-box;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #researchTable th,
+  #researchTable td {
+    font-size: 14px; /* Adjust font size for smaller screens */
+    padding: 8px; /* Reduce padding for smaller screens */
+  }
+
+  #researchTable td:nth-child(5) {
+    max-width: 300px; /* Limit Summary column width for smaller devices */
+  }
 }
