@@ -11,26 +11,26 @@ All Organization Science research is categorized into topic areas that collectiv
 
 <section class="featured-topics">
   <!-- Misconduct Section -->
-  <div class="topic">
-    <img src="assets/images/misconduct.jpg" alt="Misconduct">
+  <div class="topic" style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+    <img src="assets/images/misconduct.jpg" alt="Misconduct" style="flex: 0 0 150px; max-width: 150px; height: auto; margin-right: 20px; border-radius: 8px;">
     <div class="topic-content">
-      <h2>Misconduct</h2>
-      <ul id="misconduct-top5">
+      <h2 style="margin: 0; font-size: 1.5rem;">Misconduct</h2>
+      <ul id="misconduct-top5" style="padding-left: 20px;">
         <!-- Top 5 rows will be dynamically injected here -->
       </ul>
-      <a href="/topics/misconduct.html" class="more-link">More research on this topic →</a>
+      <a href="/topics/misconduct.html" class="more-link" style="font-weight: bold; color: #007acc; text-decoration: none; margin-top: 10px; display: block;">More research on this topic →</a>
     </div>
   </div>
 
   <!-- Science Innovation Section -->
-  <div class="topic">
-    <img src="assets/images/science_innovation.jpg" alt="Science Innovation">
+  <div class="topic" style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+    <img src="assets/images/science_innovation.jpg" alt="Science Innovation" style="flex: 0 0 150px; max-width: 150px; height: auto; margin-right: 20px; border-radius: 8px;">
     <div class="topic-content">
-      <h2>Science Innovation</h2>
-      <ul id="science_innovation-top5">
+      <h2 style="margin: 0; font-size: 1.5rem;">Science Innovation</h2>
+      <ul id="science_innovation-top5" style="padding-left: 20px;">
         <!-- Top 5 rows will be dynamically injected here -->
       </ul>
-      <a href="/topics/science_innovation.html" class="more-link">More research on this topic →</a>
+      <a href="/topics/science_innovation.html" class="more-link" style="font-weight: bold; color: #007acc; text-decoration: none; margin-top: 10px; display: block;">More research on this topic →</a>
     </div>
   </div>
 </section>
@@ -57,7 +57,7 @@ All Organization Science research is categorized into topic areas that collectiv
             // Create a list item and link it to the specific row
             const listItem = document.createElement("li");
             listItem.innerHTML = `
-              <a href="${url}#row-${i + 1}" target="_self">
+              <a href="${url}#row-${i + 1}" target="_self" style="text-decoration: none; color: #007acc;">
                 <strong>${category} - ${author}:</strong> ${title}
               </a>
             `;
