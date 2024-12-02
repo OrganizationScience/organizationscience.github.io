@@ -42,6 +42,14 @@ Explore research on misconduct, categorized into Antecedents, Consequences, and 
           <td>Dakhlallah, D. (2024). Bribery in the Workplace: A Field Experiment on the Threat of Making Group Behavior Visible. Organization Science.</td>
           <td>This field experiment explores how visibility of group behavior affects bribery in workplaces, finding that making unethical behavior observable decreases instances of bribery. Transparency serves as a deterrent, especially when group actions are collectively visible.</td>
         </tr>
+        <tr>
+          <td>Antecedents</td>
+          <td>Drivers and Preventive Factors</td>
+          <td>Frake, Byun, & Kim (2024)</td>
+          <td>Frake, J., Byun, H., & Kim, J. (2024). The Effect of Financial Resources on Misconduct: Evidence from Lottery Ticket Sales. Organization Science.</td>
+          <td>This research investigates the effect of financial resources, such as lottery ticket sales, on misconduct levels. Findings reveal that increased financial resources correlate with reduced misconduct due to the lowered temptation for risky behavior.</td>
+        </tr>
+      
       </tbody>
     </table>
   </div>
