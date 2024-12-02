@@ -54,7 +54,7 @@ Explore research on misconduct, categorized into Antecedents, Consequences, and 
           <td>Drivers and Preventive Factors</td>
           <td>Guo, Luo, & Li (2022)</td>
           <td>Guo, Y., Luo, X. R., & Li, D. (2022). Hierarchical inconsistency: A monitoring mechanism to reduce securities fraud in emerging markets. Organization Science, 33(6), 2187-2208.</td>
-          <td>The study introduces ""hierarchical inconsistency"" as a monitoring mechanism to reduce securities fraud in emerging markets. Results indicate that mismatches in hierarchical expectations between managers and employees deter fraudulent behavior.</td>
+          <td>The study introduces "hierarchical inconsistency" as a monitoring mechanism to reduce securities fraud in emerging markets. Results indicate that mismatches in hierarchical expectations between managers and employees deter fraudulent behavior.</td>
         </tr>
         <tr>
           <td>Antecedents</td>
@@ -74,8 +74,8 @@ Explore research on misconduct, categorized into Antecedents, Consequences, and 
           <td>Antecedents</td>
           <td>Drivers and Preventive Factors</td>
           <td>Kaynak & Rahman (2024)</td>
-          <td>Kaynak, E., & Rahman, H. A. (2024). ""It Takes More Than a Pill to Kill"": Bounded Accountability in Disciplining Professional Misconduct Despite Heightened Transparency. Organization Science.</td>
-          <td>This study investigates ""bounded accountability"" in disciplining professional misconduct in high-transparency environments. The authors find that heightened transparency paradoxically limits accountability by fostering complacency in enforcing discipline.</td>
+          <td>Kaynak, E., & Rahman, H. A. (2024). "It Takes More Than a Pill to Kill": Bounded Accountability in Disciplining Professional Misconduct Despite Heightened Transparency. Organization Science.</td>
+          <td>This study investigates "bounded accountability" in disciplining professional misconduct in high-transparency environments. The authors find that heightened transparency paradoxically limits accountability by fostering complacency in enforcing discipline.</td>
         </tr>
         <tr>
           <td>Antecedents</td>
@@ -95,8 +95,8 @@ Explore research on misconduct, categorized into Antecedents, Consequences, and 
           <td>Antecedents</td>
           <td>Drivers and Preventive Factors</td>
           <td>Cameron (2022)</td>
-          <td>Cameron, L. D. (2022). ""Making out"" while driving: Relational and efficiency games in the gig economy. Organization Science, 33(1), 231-252.</td>
-          <td>This paper explores the dynamic between relational goals and efficiency goals in gig economy work, highlighting the phenomenon of ""making out"" behaviors where drivers balance interpersonal rapport with productivity. The study shows that relationally driven strategies can sometimes compromise operational efficiency.</td>
+          <td>Cameron, L. D. (2022). "Making out" while driving: Relational and efficiency games in the gig economy. Organization Science, 33(1), 231-252.</td>
+          <td>This paper explores the dynamic between relational goals and efficiency goals in gig economy work, highlighting the phenomenon of "making out" behaviors where drivers balance interpersonal rapport with productivity. The study shows that relationally driven strategies can sometimes compromise operational efficiency.</td>
         </tr>
         <tr>
           <td>Antecedents</td>
@@ -110,7 +110,7 @@ Explore research on misconduct, categorized into Antecedents, Consequences, and 
           <td>Drivers and Preventive Factors</td>
           <td>Zhang, Mohliver, & King (2023)</td>
           <td>Zhang, V., Mohliver, A. C., & King, M. (2023). Where is all the deviance? Liminal prescribing and the social networks underlying the prescription drug crisis. Administrative Science Quarterly, 68(1), 228-269.</td>
-          <td>The authors analyze social networks behind prescription drug overuse, identifying ""liminal prescribing"" as a source of deviance in healthcare. Findings highlight the social structures that support excessive prescription, contributing to the opioid crisis.</td>
+          <td>The authors analyze social networks behind prescription drug overuse, identifying "liminal prescribing" as a source of deviance in healthcare. Findings highlight the social structures that support excessive prescription, contributing to the opioid crisis.</td>
         </tr>
         <tr>
           <td>Antecedents</td>
@@ -137,8 +137,8 @@ Explore research on misconduct, categorized into Antecedents, Consequences, and 
           <td>Antecedents</td>
           <td>Processes and Mechanisms</td>
           <td>Cameron (2024)</td>
-          <td>Cameron, L. D. (2024). The Making of the ""Good Bad"" Job: How Algorithmic Management Manufactures Consent Through Constant and Confined Choices. Administrative Science Quarterly, 69(2), 458-514.</td>
-          <td>The study explores how algorithmic management in gig work imposes restricted choices, creating ""good bad"" jobs that subtly influence worker consent and compliance. Findings suggest that constrained decision-making manipulates workersÕ acceptance of exploitative conditions.</td>
+          <td>Cameron, L. D. (2024). The Making of the "Good Bad" Job: How Algorithmic Management Manufactures Consent Through Constant and Confined Choices. Administrative Science Quarterly, 69(2), 458-514.</td>
+          <td>The study explores how algorithmic management in gig work imposes restricted choices, creating "good bad" jobs that subtly influence worker consent and compliance. Findings suggest that constrained decision-making manipulates workersÕ acceptance of exploitative conditions.</td>
         </tr>
         <tr>
           <td>Consequences</td>
@@ -229,7 +229,7 @@ Explore research on misconduct, categorized into Antecedents, Consequences, and 
           <td>Reactions to Misconduct</td>
           <td>Dodson et al. (2023)</td>
           <td>Dodson, S. J., Goodwin, R. D., Graham, J., & Diekmann, K. A. (2023). Moral foundations, himpathy, and punishment following organizational sexual misconduct allegations. Organization Science, 34(5), 1938-1964.</td>
-          <td>This research examines reactions to sexual misconduct allegations within organizations, particularly focusing on the role of moral foundations and ""himpathy"" (empathy toward male perpetrators). Findings reveal that moral considerations influence punishment severity, often skewed in favor of male perpetrators.</td>
+          <td>This research examines reactions to sexual misconduct allegations within organizations, particularly focusing on the role of moral foundations and "himpathy" (empathy toward male perpetrators). Findings reveal that moral considerations influence punishment severity, often skewed in favor of male perpetrators.</td>
         </tr>
 
       </tbody>
